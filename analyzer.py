@@ -57,7 +57,7 @@ def power_analysis(time, voltage, current):
     plt.show()
     return real_power, reactive_power
 
-
+#harmonic analysis via FFT
 def harmonic_analysis(time, data, y_label):
     num_samples = len(data)
     sampling_frequency = 1 / (time[1] - time[0])
@@ -83,7 +83,7 @@ def compute_phasor(data):
     angle = cmath.phase(np.mean(data))
     return magnitude * np.exp(1j * angle)
 
-
+#display all relevant phasors from data (not normalized)
 def phasor_diagram(phasors):
     plt.figure(figsize=(10, 10))
     colors = ['r', 'g', 'b', 'y', 'c', 'm']
