@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import cmath
 
+#Just a basic tool I made to simplify the data processing for AC waveforms, modify as needed
+
 path = "../data/lab1.2a5.10v.csv"
 data = pd.read_csv(path, delimiter='\t')
 time = data['Time (ms)'] * 1e-3
@@ -95,6 +97,3 @@ def phasor_diagram(phasors):
     plt.legend()
     plt.axis('equal')
     plt.show()
-
-
-power_analysis()
